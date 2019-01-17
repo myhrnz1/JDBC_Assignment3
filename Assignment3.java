@@ -31,7 +31,6 @@ public class Assignment3 {
       temp.car_id = res.getInt("car_id");
       owners.add(temp);
     }
-    System.out.println(owners.size());
     
     res = statement.executeQuery("select * from people");
     ArrayList<Person> people = new ArrayList<Person>();
@@ -42,7 +41,6 @@ public class Assignment3 {
       temp.lastname = res.getString("lastname");
       people.add(temp);
     }
-    System.out.println(people.size());
     
     res = statement.executeQuery("select * from cars");
     ArrayList<Car> cars = new ArrayList<Car>();
@@ -53,7 +51,6 @@ public class Assignment3 {
       temp.color = res.getString("color");
       cars.add(temp);
     }
-    System.out.println(cars.size());
 
     for (int i = 0; i < owners.size(); i++) {
       int person_id = owners.get(i).person_id;
